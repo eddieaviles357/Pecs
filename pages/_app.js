@@ -1,7 +1,16 @@
-import '../styles/globals.css'
+import '../styles/globals.scss';
+import Layout from '../components/Layout.js';
+import {useEffect, useState} from 'react';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+function MyApp({ Component, pageProps }) {  
 
-export default MyApp
+  return (
+    <div>
+      <Layout >
+        <Component {...pageProps} />
+      </Layout>
+    </div>
+  )
+};
+
+export default MyApp;
