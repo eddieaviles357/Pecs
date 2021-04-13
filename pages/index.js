@@ -1,6 +1,7 @@
 import {App_container, background, backgroundAnimated} from '../components/index.module.scss';
 import Avatar from '../components/avatar/Avatar';
 import Categories from '../components/categories/Categories';
+import Entertainment from '../components/categories/entertainment/Entertainment';
 import {getCalculatedPoints, categoriesHandler, PEC_OBJECTS} from '../components/constants/pecObj';
 import {useState, useEffect} from 'react';
 
@@ -71,6 +72,7 @@ function Home() {
         }
         >&nbsp;
       </div>
+      <Entertainment/>
     </main>
   )
 };
