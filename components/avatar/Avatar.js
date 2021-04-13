@@ -2,10 +2,9 @@ import {Avatar_container} from './Avatar.module.scss';
 import Image from 'next/image';
 import {useEffect,useState} from 'react';
 
-function Avatar({setXY}) {
+function Avatar({ setXY }) {
   return (
-    <div 
-    id={'avatar'} className={Avatar_container}>
+    <div id={'avatar'} className={Avatar_container}>
       <Image
         src='/img/SHIRT_640x587.png'
         width={100}
