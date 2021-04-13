@@ -16,7 +16,7 @@
 
   background: white;
   
-  box-shadow: 0 10  px 13px black;
+  box-shadow: 0 10px 13px black;
 
   position: absolute;
 
@@ -30,8 +30,26 @@
   cursor: pointer;
   @include desktop()
   {
-    width: 9rem;
-    height: 9rem;
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+.category_title {
+  border-radius: 7px;
+  padding: 0 .4rem;
+
+  word-wrap: break-word;
+  background: rgba(255, 255, 255, 0.774);
+  z-index: 99;
+
+  overflow: visible;
+
+  position: absolute;
+  transform: translate(-50%, -50%);
+  @include desktop()
+  {
+    font-size: 2rem;
   }
 }
 

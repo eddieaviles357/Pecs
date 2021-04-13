@@ -1,37 +1,40 @@
 import {
   categories_container,
   background,
-  backgroundAnimated
+  backgroundAnimated,
+  category_title
 } from './Categories.module.scss';
 
 import Image from 'next/image';
 import {useState, useEffect} from 'react';
 
-function Categories({title, img, x, y}) {
-
-  // onClick={e=>console.log(e.target.getBoundingClientRect())}
+function Categories( {title, img, setExtend, extend, coord: { x, y }} ) {
+  const handleClick = e => {
+    setExtend(!extend);
+  }
   return(
+    <>
     <div 
-      onClick={e=>{
-        let square = e.target.getBoundingClientRect();
-        console.log('---------------------------------------------------')
-        console.log('CATEGORY::CENTER::HEIGHT::Y', square.top + ( square.height / 2 ));
-        console.log('CATEGORY::CENTER::WIDTH::X', square.left + ( square.width / 2 ));
-        console.log('---------------------------------------------------')
-      }}
+      onClick={handleClick}
       id={title}
       className={categories_container}>
-      {title}
       <Image src={img} layout='fill'/>
+    </div>
+    <span className={category_title}>{title}</span>
       <style jsx>
-        {
-          `div {
+        {`
+          div {
             top: ${y}px!important;
             left: ${x}px!important;
-          }`
+          }
+          span {
+            top: ${y}px!important;
+            left: ${x}px!important;
+          }
+          `
         }
       </style>
-    </div>
+    </>
   )
 }
 

@@ -10,6 +10,42 @@ export const getCalculatedPoints = (initialPoint, origin, radians) => {
   };
 };
 
+export const categoriesHandler = (elementTarget) => {
+  const text = elementTarget.parentElement.parentElement.innerText.toUpperCase();
+  switch(text) {
+    case 'SHIRT': 
+      // setExtend(!extend);
+      console.log('SHIRT element');
+      break;
+    case 'FEELINGS':
+      console.log('FEELINGS element');
+      break;
+    case 'ENTERTAINMENT':
+      console.log("ENTERTAINMENT element");
+      break;
+    case 'HELP':
+      console.log("HELP element");
+      break;
+    case 'HYGIENE':
+      console.log("HYGIENE element");
+      break;
+    case 'FUN':
+      console.log("FUN element");
+      break;
+    case 'SPORTS':
+      console.log("SPORTS element");
+      break;
+    case 'VEGGIES':
+      console.log("VEGGIES element");
+      break;
+    case 'VEGGIES':
+      console.log("VEGGIES element");
+      break;
+    default: 
+      console.log('default hit')
+  }
+};
+
 export const PEC_OBJECTS = [{
   id: 1,
   img: '/img/SHIRT_640x587.png',
