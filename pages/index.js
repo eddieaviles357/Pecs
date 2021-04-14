@@ -22,13 +22,25 @@ function Home() {
       // point that is going to be rotated ( x2, y2 )
       let initialPoint = {
         x: window.innerWidth / 2,
-        y: window.innerHeight / 4
+        y: window.innerHeight / 3
+      }
+
+      if(origin.y > origin.x) {
+        setCategoryCoord( { 
+          x: initialPoint.x, 
+          y: initialPoint.y 
+        } );
+      } 
+      else {
+        setCategoryCoord( { 
+          x: initialPoint.x + initialPoint.y, 
+          y: initialPoint.y 
+        } );
       }
       
-      setCategoryCoord( { 
-        x: initialPoint.x, 
-        y: initialPoint.y 
-      } );
+      console.log('USE::EFFECT::width', initialPoint.x);
+      console.log('USE::EFFECT::height', initialPoint.y);
+      
 
       setAvatarCoord( { 
         x: origin.x, 

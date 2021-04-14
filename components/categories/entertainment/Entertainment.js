@@ -2,8 +2,9 @@ import {container} from './Entertainment.module.scss';
 
 function Entertainment () {
   return(
-    <div>
+    <div className={container}>
       Entertainment
+      
     </div>
   )
 }
